@@ -32,7 +32,7 @@ def sendAPI(start_at,end_at,title,label):
     'Authorization': 'Bearer ' + ACCESS_TOKEN
     }
 
-    updateCalenderURL = 'https://timetreeapis.com/calendars/NDqW_IFTrZn7/events'
+    updateCalenderURL = 'https://timetreeapis.com/calendars/{カレンダー番号}/events'
     data = {
         "data": {
           "attributes": {

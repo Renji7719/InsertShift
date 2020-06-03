@@ -86,10 +86,7 @@ for i in range(len(shiftList)):
         sendAPI(start_at,end_at,title,"2")
 
     elif  shiftList[i] == 'C' or shiftList[i] == 'c':
-        if day == 1:
-            start_at = '2020-{month}-{day}T23:00:00.000Z'.format(month=month,day=calendar.monthrange(int(YEAR), int(month))[1])
-        else:
-            start_at = '2020-{month}-{day}T00:00:00.000Z'.format(month=month,day=str(day) if (day)>= 10 else '0'+str(day))
+        start_at = '2020-{month}-{day}T00:00:00.000Z'.format(month=month,day=str(day) if (day)>= 10 else '0'+str(day))
         end_at = '2020-{month}-{day}T09:00:00.000Z'.format(month=month,day=str(day) if day >= 10 else '0'+str(day))
         title = '研修'
         sendAPI(start_at,end_at,title,"3")
